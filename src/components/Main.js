@@ -1,27 +1,19 @@
 // Vendor
 import React from 'react';
-import { Provider } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 
 // Application
-import store from '../store';
+import Exercise1 from './Exercise1';
+import Exercise2 from './Exercise2';
 import Home from './Home';
-import OriginalList from './OriginalList';
-import Search from './Search';
-import UpdatedList from './UpdatedList';
-
-import '../styles/custom.css';
 
 const Main = () => (
   <main>
-    <Provider store={store}>
-      <Switch>
-        <Route path='/original_list' component={OriginalList}/>
-        <Route path='/search' component={Search}/>
-        <Route path='/updated_list' component={UpdatedList}/>
-        <Route path='/' component={Home}/>
-      </Switch>
-    </Provider>
+    <Switch>
+      <Route path='/exercise1' component={Exercise1}/>
+      <Route path='/exercise2' component={Exercise2}/>
+      <Route path='/' component={Home}/>
+    </Switch>
   </main>
 );
 
