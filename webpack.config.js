@@ -14,8 +14,10 @@ module.exports = {
     filename: "main.js",
   },
   devServer: {
-    contentBase: './dist/',
-    hot: true
+    contentBase: './',
+    watchContentBase: true,
+    hot: true,
+    disableHostCheck: true
   },
   plugins: [
     htmlPlugin

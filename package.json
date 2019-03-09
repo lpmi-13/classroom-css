@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --mode development --config ./webpack.config.js --progress --colors",
-    "build": "webpack --mode production --config ./webpack.config.js"
+    "build": "webpack --mode production --config ./webpack.config.js",
+    "postinstall": "docker run --name forwarding --rm -d -v $(pwd):/app test",
+    "forward": "docker exec forwarding sh -c 'commands'"
   },
   "keywords": [],
   "author": "Adam Leskis",
